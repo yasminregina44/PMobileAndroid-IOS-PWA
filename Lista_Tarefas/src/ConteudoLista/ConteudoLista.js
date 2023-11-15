@@ -1,21 +1,29 @@
 import { useState } from "react";
-import { Touchable, TouchableOpacity, View } from "react-native/types";
+import { Text, View, TextInput, TouchableOpacity } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import metadata from '../storage.metadata.json';
 
-export default function ConteudoLista() {
+export default function ConteudoLista({ navigation }) {
 
-    const [nome, setNome] = useState("");
-    const [data, setData] = useState("");
+    const [nomeItem, setNomeItem] = useState("")
+
+    const salvarNomeItem = async () => {
+        const itemTemporario = await AsyncStorage.getItem(metadata.LISTA.NOMELISTA);
+        const saveName = nomeItem || "";
+        let novaLista = JSON.parse(listaTemporaria);
+        novaLista.push(saveName);
+        await AsyncStorage.setItem(metadata.LISTA.NOMELISTA, JSON.stringify(novoItem));
+        navigation.navigate("Home");
+    }
 
     return (
-        <View>
-            <Text>{nome}</Text>
-            <Text>{data}</Text>
-            <TouchableOpacity>
-                <Text>Editar</Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Adicionar Lista</Text>
+            <TextInput placeholder='Digite um item da lista' value={nomeItem} onChangeText={setNomeItem} />
+            <TouchableOpacity onPress={salvarNomeItem} >
+                <Text>Adicionar Lista</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Excluir</Text>
-            </TouchableOpacity>
+
         </View>
     )
 }
