@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    background-color: #F5EFFF;
+    color: #080014;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+}
+
+#adicionar{
+    display: flex;
+    justify-content: center;
+}
+
+#campo-tarefa{
+    width: 30rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #080014;
+    background-color: #fffafa;
+}
+
+#botao-adicionar {
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #080014;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #080014;
+    background-color: #fffafa;
+}
+
+#botao-adicionar:hover{
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    color: #080014;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    background-color: #CEADFF;    
+}
+
+#lista-tarefas {
+    margin-top: 20px;
+}
+
+.tarefa {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #E7D6FF;
+    border-radius: 4px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.concluida{
+    text-decoration: line-through;
+    color: #CEADFF;
+}
+
+.botaoExcluir {
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #080014;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #080014;
+    background-color: #fffafa;
+}
+
+.botaoExcluir:hover{
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    color: #080014;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    background-color: #CEADFF;    
+}

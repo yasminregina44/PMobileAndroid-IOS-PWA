@@ -1,0 +1,23 @@
+{
+    "short_name":"PWA",
+    "name": "Progresssive Web Aplication",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "theme-color":"#ffffff",
+    "background_color": "#000000",
+    "background-color": "#000000",
+    "description": "my site description",
+    "icons": [
+        {
+            "src":"/assets/ehisso.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src":"/assets/ehisso_resized.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}
